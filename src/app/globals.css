@@ -1,0 +1,25 @@
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background:#0a041f;
+    --foreground: #f5f4f4;
+  }
+}
+
+body {
+  text-align: center;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+  color: #f5f4f4;
+  background-color: #000;
+}
+p{
+  color: aqua;
+}
+ h2{
+  color: chartreuse;
+ }
