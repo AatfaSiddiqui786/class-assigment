@@ -35,7 +35,7 @@ export default function AboutPage() {
             <div className="bg-white text-gray-800 p-6 rounded shadow">
               <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
               <p>
-                We aim to empower individuals and businesses by providing tailored solutions that drive success and inspire creativity. Whether it's web design, content creation, or support, we are dedicated to exceeding your expectations.
+                We aim to empower individuals and businesses by providing tailored solutions that drive success and inspire creativity. Whether it is web design, content creation, or support, we are dedicated to exceeding your expectations.
               </p>
             </div>
             <div className="bg-white text-gray-800 p-6 rounded shadow">

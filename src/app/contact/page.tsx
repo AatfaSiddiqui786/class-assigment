@@ -28,7 +28,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-6">Get in Touch</h2>
           <p className="text-lg text-center mb-8">
-            Have questions or want to work with us? We’d love to hear from you!
+            Have questions or want to work with us? We do love to hear from you!
           </p>
           <div className="bg-white text-gray-800 p-8 rounded shadow mx-auto max-w-2xl">
             <form className="space-y-6">
@@ -54,7 +54,7 @@ export default function ContactPage() {
                 <label htmlFor="message" className="block text-sm font-medium mb-1">Message</label>
                 <textarea
                   id="message"
-                  rows="5"
+                  rows={5}
                   className="w-full border border-gray-300 p-2 rounded"
                   placeholder="Your Message"
                 ></textarea>

@@ -64,7 +64,7 @@ export default function ServicesPage() {
             </div>
             <div className="bg-white p-6 rounded shadow">
               <h4 className="text-xl font-semibold mb-2">Customer Satisfaction</h4>
-              <p>We prioritize our clients' satisfaction by providing customized solutions.</p>
+              <p>We prioritize our clients satisfaction by providing customized solutions.</p>
             </div>
             <div className="bg-white p-6 rounded shadow">
               <h4 className="text-xl font-semibold mb-2">Innovative Solutions</h4>
