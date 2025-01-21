@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-100 text-gray-800">
       <Head>
-        <title>Home Page</title>
+        <title>Home Page Aatfa</title>
       </Head>
 
       {/* Header */}
