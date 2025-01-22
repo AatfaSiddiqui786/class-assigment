@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 
 export default function ServicesPage() {
   return (
@@ -65,3 +64,4 @@ export default function ServicesPage() {
     </div>
   );
 }
+
