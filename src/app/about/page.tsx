@@ -9,21 +9,6 @@ export default function AboutPage() {
         <title>About Us</title>
       </Head>
 
-      {/* Header */}
-      <header className="bg-orange-500 text-white py-4">
-        <div className="container mx-auto flex justify-between items-center px-4">
-          <h1 className="text-2xl font-bold">Creative Home</h1>
-          <nav>
-            <ul className="flex space-x-4">
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/about">About</Link></li>
-              <li><Link href="/services">Services</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-
       {/* About Section */}
       <section className="bg-gradient-to-r from-amber-900 to-amber-700 text-white py-20">
         <div className="container mx-auto px-4">
@@ -71,13 +56,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-orange-500 text-white py-6">
-        <div className="container mx-auto text-center px-4">
-          <p className="text-sm">&copy; 2025 Creative Home. All Rights Reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 }
