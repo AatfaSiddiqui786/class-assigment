@@ -1,53 +1,65 @@
-"use client";
-import { useState } from "react";
-import Link from "next/link";
+"use client"
+import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Navbar() {
-    const [menuOpen, setMenuOpen] = useState(false); // State to toggle the menu
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-    return (
-        <header className="bg-orange-500 text-white">
-            <div className="container mx-auto flex justify-between items-center px-4 py-4">
-                {/* Website Title */}
-                <h1 className="text-2xl font-bold">Creative Home</h1>
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
-                {/* Hamburger Menu Button */}
-                <button
-                    className="text-2xl md:hidden focus:outline-none"
-                    onClick={() => setMenuOpen(!menuOpen)}
-                >
-                    ☰
-                </button>
-            </div>
+  return (
+    <nav className="bg-orange-400 shadow-md">
+      <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <div className="text-white text-2xl font-bold">
+            <Link href="/">MyWebsite</Link>
+          </div>
 
-            {/* Navigation */}
-            <nav
-                className={`${menuOpen ? "block" : "hidden"
-                    } absolute top-10 left-0 w-full bg-orange-500 md:static md:w-auto md:block`}
-            >
-                <ul className="flex flex-col md:flex-row md:space-x-6 p-4 md:p-0">
-                    <li className="py-2 md:py-0">
-                        <Link href="/" className="hover:text-gray-300">
-                            Home
-                        </Link>
-                    </li>
-                    <li className="py-2 md:py-0">
-                        <Link href="/about" className="hover:text-gray-300">
-                            About
-                        </Link>
-                    </li>
-                    <li className="py-2 md:py-0">
-                        <Link href="/services" className="hover:text-gray-300">
-                            Services
-                        </Link>
-                    </li>
-                    <li className="py-2 md:py-0">
-                        <Link href="/contact" className="hover:text-gray-300">
-                            Contact
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    );
+          {/* Desktop Navbar */}
+          <div className="hidden md:flex space-x-8">
+            <Link href="/" className="text-white text-lg hover:text-yellow-400">
+              Home
+            </Link>
+            <a href="/about" className="text-white text-lg hover:text-yellow-400">
+              About
+            </a>
+            <Link href="/services" className="text-white text-lg hover:text-yellow-400">
+              Services
+            </Link>
+            <Link href="/contact" className="text-white text-lg hover:text-yellow-400">
+              Contact
+            </Link>
+          </div>
+
+          {/* Mobile Navbar Button */}
+          <div className="md:hidden">
+            <button onClick={toggleMobileMenu} className="text-white text-2xl">
+              {isMobileMenuOpen ? '×' : '≡'}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden mt-4 space-y-4">
+            <Link href="/" className="block text-white text-lg hover:text-yellow-400">
+              Home
+            </Link>
+            <Link href="/about" className="block text-white text-lg hover:text-yellow-400">
+              About
+            </Link>
+            <Link href="/services" className="block text-white text-lg hover:text-yellow-400">
+              Services
+            </Link>
+            <Link href="/contact" className="block text-white text-lg hover:text-yellow-400">
+              Contact
+            </Link>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
 }
